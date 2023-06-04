@@ -1,0 +1,154 @@
+/* VideoItem.css */
+
+.video-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .video-thumbnail {
+    width: 120px;
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .video-details {
+    flex-grow: 1;
+  }
+  
+  .video-title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #333333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .video-description {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #777777;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .video-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .video-item:hover .video-title {
+    color: #cc0000;
+  }
+  
+  .video-item:hover .video-thumbnail {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  
+  .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .video-item:hover .play-overlay {
+    opacity: 1;
+  }
+  
+  .title {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive styles */
+  
+  @media screen and (min-width: 768px) {
+    .video-item {
+      margin-bottom: 2rem;
+    }
+  
+    .thumbnail {
+      max-width: 100%;
+    }
+  
+    .play-overlay {
+      font-size: 4rem;
+    }
+  
+    .title {
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* Sidebar styles */
+  
+  .sidebar {
+    background-color: #f1f1f1;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #333333;
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .sidebar-list li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-list a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive sidebar styles */
+  
+  @media screen and (max-width: 767px) {
+    .sidebar {
+      padding: 10px;
+    }
+  
+    .sidebar h2 {
+      font-size: 1.4rem;
+    }
+  
+    .sidebar-list a {
+      font-size: 1rem;
+    }
+  }
+  
